@@ -1,0 +1,16 @@
+build*/
+debug/
+release/
+*.user
+*.o
+*.obj
+*.exe
+*.dll
+*.pdb
+*.ilk
+moc_*
+ui_*.h
+qrc_*
+Makefile*
+.qmake.stash
+.qmake.cache
