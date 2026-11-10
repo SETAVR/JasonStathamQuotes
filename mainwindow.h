@@ -2,13 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QPointer>
-#include <QStringList>
 #include <QWidget>
 #include "quotelabel.h"
 
 class QPushButton;
 class QTimer;
 class QVBoxLayout;
+class QStringListModel;
+class QListView;
 
 class MainWindow : public QWidget
 {
@@ -21,8 +22,10 @@ private:
     void toggleQuote();
     void toggleAutoChange();
     void stopAutoChange();
+    void updateQuote();
 
-    const QStringList m_quotes;
+    QStringListModel *m_model;
+    QListView *m_view;
     int m_index = 0;
     QPointer<QuoteLabel> m_quoteLabel;
     QVBoxLayout *m_layout;
